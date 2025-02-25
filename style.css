@@ -251,3 +251,63 @@
 .ship-display {
   transition: transform 0.3s ease;
 }
+
+/* Virtual keyboard styles */
+.virtual-keyboard {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.vk-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.virtual-key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background: #f4f4f4;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  user-select: none;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+
+.virtual-key.active {
+  background: #ddd;
+  transform: translateY(2px);
+}
+
+/* Show only on mobile */
+@media (max-width: 768px) {
+  .virtual-keyboard {
+    display: flex;
+  }
+  
+  /* Adjust the main container to make room for virtual keyboard */
+  .main-stage {
+    padding-bottom: 180px;
+  }
+
+  .scene {
+    transform: scale(0.8);
+  }
+  
+  .instruction-dialog {
+    width: 95%;
+    font-size: 14px;
+  }
+}
