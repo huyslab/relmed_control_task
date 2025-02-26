@@ -49,20 +49,23 @@ function initVirtualKeyboard() {
   if (!isMobileDevice()) return;
   
   // Create the virtual keyboard
-  // Replace the keyboardHTML in initVirtualKeyboard()
-const keyboardHTML = `
-  <div class="virtual-keyboard" id="virtual-keyboard">
-    <div class="vk-row">
-    <div class="virtual-key" data-key="ArrowLeft">←</div>
-      <div class="virtual-key" data-key="d">D</div>
-      <div class="virtual-key" data-key="f">F</div>
-      <div class="virtual-key" data-key="j">J</div>
-      <div class="virtual-key" data-key="k">K</div>
-      <div class="virtual-key" data-key="ArrowRight">→</div>
+  const keyboardHTML = `
+    <div class="virtual-keyboard" id="virtual-keyboard">
+      <div class="vk-row">
+        <div class="vk-group left-group">
+        <div class="virtual-key" data-key="ArrowLeft">←</div>
+          <div class="virtual-key" data-key="d">D</div>
+          <div class="virtual-key" data-key="f">F</div>
+        </div>
+        <div class="vk-group right-group">
+        <div class="virtual-key" data-key="j">J</div>
+        <div class="virtual-key" data-key="k">K</div>
+        <div class="virtual-key" data-key="ArrowRight">→</div>
+        </div>
+      </div>
     </div>
-  </div>
-`;
-  
+  `;
+    
   // Add the keyboard to the document
   document.body.insertAdjacentHTML('beforeend', keyboardHTML);
   
