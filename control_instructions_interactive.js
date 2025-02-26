@@ -89,7 +89,7 @@ function setupFuelTrial(config) {
     // Listener for the first key press
     const firstKeyListener = jsPsych.pluginAPI.getKeyboardResponse({
         callback_function: handleFirstKey,
-        valid_responses: ['ArrowLeft', 'ArrowRight'],
+        valid_responses: ['ArrowRight'],
         rt_method: 'performance',
         persist: false,
         allow_held_key: false,

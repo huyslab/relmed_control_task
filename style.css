@@ -254,13 +254,13 @@
 
 /* Virtual keyboard styles */
 .virtual-keyboard {
-  display: none; /* Hidden by default */
+  display: flex; /* Hidden by default */
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.7);
+  padding: 15px 10px 25px 10px;
+  background: rgba(0, 0, 0, 0.2);
   z-index: 1000;
   flex-direction: column;
   gap: 10px;
@@ -276,11 +276,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   background: #f4f4f4;
-  border-radius: 10px;
-  font-size: 24px;
+  border-radius: 50%;
+  font-size: 26px;
   font-weight: bold;
   user-select: none;
   box-shadow: 0 3px 5px rgba(0,0,0,0.2);
@@ -291,23 +291,9 @@
   transform: translateY(2px);
 }
 
-/* Show only on mobile */
-@media (max-width: 768px) {
+/* Only show on mobile devices */
+@media (pointer: fine) {
   .virtual-keyboard {
-    display: flex;
-  }
-  
-  /* Adjust the main container to make room for virtual keyboard */
-  .main-stage {
-    padding-bottom: 180px;
-  }
-
-  .scene {
-    transform: scale(0.8);
-  }
-  
-  .instruction-dialog {
-    width: 95%;
-    font-size: 14px;
+    display: none; /* Hide on devices with precise pointers (like desktops) */
   }
 }

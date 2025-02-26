@@ -226,17 +226,22 @@
   top: 110%;
   width: 13.5vh;
   height: 1.75vh;
+  max-width: 15vw;
+  max-height: 2vw;
 }
 
 .instruction-stage .arrow-left,
 .instruction-stage .arrow-right {
   height: 4.5vh;
-  width: 4.5vh;
+  width: auto;
+  max-height: 6vw;
 }
 
 .fuel-icon {
   width: 8vh;
   height: 8vh;
+  max-width: 8vw;
+  max-height: 8vw;
   position: absolute;
 }
 
@@ -248,12 +253,14 @@
 
 .instruction-stage .destination-island {
   height: 17.5vh;
+  max-height: 25vw;
   bottom: 55%;
   top: auto;
 }
 
 .instruction-stage .ship-feedback {
   height: 15vh;
+  max-height: 20vw;
 }
 
 .fuel-animation {
